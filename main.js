@@ -47,3 +47,23 @@ $('#post-placeholder').append(postHtml);
 
 //Arrow Functions in ES6
 
+
+
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+  }
+
+var checkObj = {
+    "manAge": function(){
+        return this.firstName+" is "+ this.age +"Year old."
+    }
+}
+
+var harsh = new Person("harsh","yadav",28,"brown");
+
+checkObj.manAge.call(harsh);
+
+
