@@ -1,0 +1,5 @@
+https://code.tutsplus.com/tutorials/token-based-authentication-with-angularjs-nodejs--cms-22543
+http://jasonwatmore.com/post/2015/12/09/mean-stack-user-registration-and-login-example-tutorial#projectstructure
+https://scotch.io/tutorials/authenticate-a-node-js-api-with-json-web-tokens
+https://scotch.io/tutorials/the-ins-and-outs-of-token-based-authentication
+https://scotch.io/tutorials/the-anatomy-of-a-json-web-token

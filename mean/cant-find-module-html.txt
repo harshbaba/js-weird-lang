@@ -1,0 +1,17 @@
+1.Error: Cannot find module 'html'
+Fix:
+
+When you try to execute first page of your angular app using express routes
+like:
+app.get('/', function(req, res) {
+        res.render('./public/login.html'); // load the index.html file
+});
+
+Note:here we have used res.render to render file on specifiy route, because 
+res.render use in express to render a file.
+While in case of mean app (angular frontend) we use angular for frontend,
+not use any template engine of express, so we will use this:
+
+app.get('/', function(req, res) {
+    res.sendfile('./public/login.html'); // load the single view file (angular will handle the page changes on the front-end)
+}); 

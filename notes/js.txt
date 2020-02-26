@@ -1,0 +1,11 @@
+=============Syntactic sugar=============
+In computer science, syntactic sugar is syntax within a programming language that is designed to make things easier to read or to express.
+It makes the language "sweeter" for human use: things can be expressed more clearly, more concisely, or in an alternative style that some may prefer.
+
+For example, many programming languages provide special syntax for referencing and updating array elements. Abstractly, an array reference is a procedure of two arguments:
+an array and a subscript vector, which could be expressed as get_array(Array, vector(i,j)). Instead, many languages provide syntax like Array[i,j].
+Similarly an array element update is a procedure of three arguments, something like set_array(Array, vector(i,j), value), but many languages provide syntax like Array[i,j] = value.
+
+
+======================Promises================
+https://scotch.io/tutorials/javascript-promises-for-dummies

@@ -1,0 +1,4 @@
+1.
+str.charAt(0)
+2.
+array.indexOf("particular value");

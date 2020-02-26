@@ -1,0 +1,79 @@
+1.Event Delegation
+https://www.sitepoint.com/event-delegation-with-jquery/
+
+2.Event Bubbling & Capturing
+https://medium.com/@vsvaibhav2016/event-bubbling-and-event-capturing-in-javascript-6ff38bec30e
+
+3.stoppropagation-vs-stopimmediatepropagation
+https://codeplanet.io/preventdefault-vs-stoppropagation-vs-stopimmediatepropagation/
+
+4.event.preventDefault
+https://codeplanet.io/preventdefault-vs-stoppropagation-vs-stopimmediatepropagation/
+
+5.JS String Methods
+https://www.w3schools.com/js/js_string_methods.asp
+
+6.JS Number Methods
+https://www.w3schools.com/js/js_numbers.asp
+
+7.JS Array Methods
+https://www.w3schools.com/js/js_array_methods.asp
+
+8.JavaScript Regular Expressions
+https://www.w3schools.com/js/js_regexp.asp
+
+9.Js Scope
+https://www.w3schools.com/js/js_scope.asp
+
+10.Hoisting in Java Script
+a.Hoisting Variables 
+b.Hoisting functions
+https://scotch.io/tutorials/understanding-hoisting-in-javascript
+https://www.w3schools.com/js/js_hoisting.asp
+https://medium.com/javascript-in-plain-english/https-medium-com-javascript-in-plain-english-what-is-hoisting-in-javascript-a63c1b2267a1
+
+11.JS Strict Mode
+https://www.w3schools.com/js/js_strict.asp
+
+12.Closure
+https://www.w3schools.com/js/js_function_closures.asp
+
+13.CallBack
+A callback is a function that is to be executed after another function has finished executing — hence the name ‘call back’.
+In JavaScript, functions are objects. Because of this, functions can take functions as arguments, and can be returned by other functions. 
+Functions that do this are called higher-order functions. Any function that is passed as an argument is called a callback function.
+
+https://codeburst.io/javascript-what-the-heck-is-a-callback-aba4da2deced
+
+14.Service Workers for Offline App
+
+15.Call,Apply & Bind
+With the call() method, you can write a method that can be used on different objects.
+With the apply() method, you can write a method that can be used on different objects.
+
+The difference is:
+The call() method takes arguments separately.
+The apply() method takes arguments as an array.
+https://www.w3schools.com/js/js_function_apply.asp
+
+16.IIFE & its advantage
+IIFE (Immediately Invokable Function Expression) is a important concept in JavaScript. ... 
+The common advantage of IIFE is that any "Function or Variable" defined inside IIFE, 
+cannot be accessed outside the IIFE block, thus preventing global scope from getting polluted.
+https://www.codeproject.com/Articles/1110916/JavaScript-IIFE-Design-Pattern
+
+18.DEFER AND ASYNC TAGS
+
+https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html
+https://www.upwork.com/hiring/development/11-tips-to-optimize-javascript-and-improve-website-loading-speeds/
+
+19.What is namespacing in javascript and what it does
+https://www.codeproject.com/Articles/829254/JavaScript-Namespace
+https://stackoverflow.com/questions/8523231/what-is-meant-by-javascript-namespacing
+
+20.Object Based vs Object Oriented
+
+21.Data types in JavaScript
+https://medium.com/@junshengpierre/javascript-primitive-values-object-references-361cfc1cbfb0
+https://www.w3schools.com/js/js_datatypes.asp
+

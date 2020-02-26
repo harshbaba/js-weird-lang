@@ -1,0 +1,52 @@
+=>For create Services
+ng g service service-name
+ex:=>ng g service pnr-status
+
+=>This command will create two files
+pnr-status.service.spec.ts
+pnr-status.service.ts
+
+=>Now you have to add this service in your component
+import { PnrStatusService } from '../services/pnr-status.service';
+you can copy above path from pnr-status.service.spec.ts
+
+=>Now inject this service in providers like this:
+@Component({
+  selector: 'app-pnr-status',
+  templateUrl: './pnr-status.component.html',
+  styleUrls: ['./pnr-status.component.css'],
+  providers:[PnrStatusService]
+})
+
+=>now lets go to service file "pnr-status.service.ts"
+Here you will see on top 
+import { Injectable } from '@angular/core';
+
+=>You have to add module like http for creating rest api calls, add below module dependencies in your services/pnr-status
+import {Http} from '@angular/http';
+import 'rxjs/add/operator/map';
+
+=>In constructor
+constructor(private _http : Http) { }
+
+=>Now you have to create functions of this services like getStatus, getUser, editUser
+getPnr(){
+    return this._http.get("http://jsonplaceholder.typicode.com/posts").map(result => result.json());
+}
+
+=>Now our service work is done, lets back to our component file "pnr-status.component.ts"
+
+=>In constructor 
+constructor(private _pnrStatusService: PnrStatusService) { }
+
+=>Now we will create a function, which will be call from our html file(by user)
+getPnrStatus(){
+    console.log('hello');
+    this._pnrStatusService.getPnr().subscribe(pnrStatus =>{
+      console.log(pnrStatus);
+    })
+}
+
+=>At last you have to call this function from html file like this
+<input type="submit" value="Get PNR Status" (click)="getPnrStatus($event)"/>
+

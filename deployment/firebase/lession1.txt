@@ -1,0 +1,20 @@
+=>Official Url:
+https://console.firebase.google.com
+
+=>Install Firebase command tools on your system (If you have not)
+npm i -g firebase-tools
+
+Note: g means globally
+
+=>Do Login
+firebase login
+Note: if you already logged in then it will show your email Id
+
+=>Go to project folder and initalise firebase
+firebase init
+
+=> for deploy
+firebase deploy
+
+
+firebase deploy --project my-project-id 

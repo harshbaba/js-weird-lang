@@ -1,0 +1,70 @@
+=>For Creating Guards
+ng g guard auth
+
+=========We will protect blog page from guard====
+> first create guards folder(optional, we will put all guards inside this folder.)
+> create guard like "auth" with the cli
+ng g guard auth
+=>Got to routing file (app-routing.module.ts) and import this guard like
+import { AuthGuard } from '../guards/auth.guard';
+=>Now add "canActivate" in that route, which you want to protect
+{
+    path: 'blog',
+    component: BlogComponent,
+    canActivate:[AuthGuard]
+},
+
+=>Now we will create a service "auth"
+>auth.service.ts
+>ng g service auth
+> open that file, inside that file we have crated a function to check "isloggedIn" with the help of localstorage
+>this service we will call from guard.
+
+import { Injectable } from '@angular/core';
+import 'rxjs/add/operator/map';
+
+@Injectable()
+export class AuthService {
+
+  constructor() {}
+
+  get isLoggedIn() {
+    if(!localStorage.getItem('userToken')){
+      return false;
+    }
+    return true;
+  }
+}
+
+=>Now open guard.ts file, and create own file like this 
+import { Injectable } from '@angular/core';
+import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
+import { Observable } from 'rxjs/Observable';
+
+import { AuthService } from '../services/auth.service';
+
+
+@Injectable()
+export class AuthGuard implements CanActivate {
+
+  constructor(
+    private auth: AuthService,
+    private router: Router
+  ) {}
+
+  canActivate(
+    next: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
+      // redirect and return false
+    if (!this.auth.isLoggedIn) {
+      this.router.navigate(['/login']);
+    }
+    return true;
+    
+    
+  }
+}
+
+
+===================Refernce Url==========
+https://scotch.io/tutorials/protecting-angular-v2-routes-with-canactivatecanactivatechild-guards

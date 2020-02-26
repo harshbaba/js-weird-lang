@@ -1,0 +1,1 @@
+https://www.tektutorialshub.com/angular-pass-data-to-parent-component/

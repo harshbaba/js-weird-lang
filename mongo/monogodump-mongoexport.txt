@@ -1,0 +1,22 @@
+1.
+mongodump -d mydb -o E:\harsh
+
+2.
+mongorestore E:\harsh
+
+3.
+mongoexport -h id.mongolab.com:60599 -u username -p password -d mydb -c mycollection -o mybackup.json
+
+Ex->
+mongoexport -d mydb -c test -o E:\harsh\mydb.json
+
+4.
+mongoimport -d dbname -c newCollecionname --file fileName.json
+EX=>
+mongoimport -d blog -c posts --file D:/www/blog-dashboard/db-bkup/posts-25may.json
+
+
+Go to C:\Program Files\MongoDB\Server\3.4\bin
+and Run like this command (below)
+./mongodump -d hishaab-kitaab-backend -o D:/www/hishaab-kitaab-backend/db
+

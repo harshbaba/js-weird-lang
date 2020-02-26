@@ -1,0 +1,4 @@
+https://practice.geeksforgeeks.org/topics/Mathematical/
+http://thatjsdude.com/interview/js2.html
+https://github.com/utatti/Front-end-Developer-Interview-Questions-And-Answers/blob/master/answers/js-questions.md
+https://github.com/h5bp/Front-end-Developer-Interview-Questions/blob/master/questions/general-questions.md

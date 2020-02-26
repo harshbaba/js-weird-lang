@@ -1,0 +1,6 @@
+https://www.youtube.com/watch?v=p-4rs631ACo
+Source Files:
+https://www.youtube.com/redirect?q=http%3A%2F%2Fcodemobiles.com%2Fbiz%2Ftraining%2Fvideos%2FSourceCode%2Fangular-universal-seo.zip&redir_token=WjGylhYE42OaBfD3QCSa4VC57Oh8MTUyOTM0MzcyMEAxNTI5MjU3MzIw&event=video_description&v=p-4rs631ACo
+
+https://angular.io/guide/universal#why-universal
+Note:See only steps from angular.io, dont take code

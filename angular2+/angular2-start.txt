@@ -1,0 +1,18 @@
+1.Install Typescript
+npm install -g typescript
+
+2.Install Typings
+npm install -g typings
+
+3.Install Angular command Line Interface
+npm install -g angular -cli (This did not worked for me)
+npm install -g @angular/cli
+
+4.check ng version 
+ng-v
+
+5.Create New Project
+ng new project_name
+
+6.Start Server
+ng serve

@@ -1,0 +1,14 @@
+=======================Mongo export or import collection=======================
+=>go to mongo bin folder like
+Ex->C:\Program Files\MongoDB\Server\3.4\bin
+
+=>Execute for Import
+mongoimport --db blog --collection users --file "E:\www\node-login-ejs\db\users.json"
+
+=>Execute for Export
+mongoexport --db blog --collection users --out "E:\www\node-login-ejs\db\users.json"
+
+Note:make sure mongo server is runing...
+
+
+

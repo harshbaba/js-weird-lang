@@ -1,0 +1,54 @@
+=>Create a database
+use db_name
+Example:use bookstore
+
+=>show databases
+show dbs
+
+=>switch database
+use db_name
+
+=>create collections
+db.createCollection(name, options)
+Example:db.createCollection("posts")
+Example:db.createCollection("mycol", { capped : true, autoIndexID : true, size : 
+   6142800, max : 10000 } )
+   
+
+=>show collections
+
+=>Insert Data
+db.collection_name.insert(key:'title')
+Example1:
+db.genres.insert({name:'suspense'})
+Example2:
+db.books.insert({title:'One Night at Call Centre',genres:'Drama',description:'Lorem Ipsum dolor Sit Amet',author:'Harsh', publisher:'Baba & Company'})
+
+=>show collection database
+db.collection_name.find()
+Example:
+db.books.find()
+
+=>update records
+db.COLLECTION_NAME.save({_id:ObjectId(),NEW_DATA})
+Example:
+db.mycol.update({'title':'MongoDB Overview'},{$set:{'title':'New MongoDB Tutorial'}})
+
+Example
+db.posts.save(
+   {
+      "_id" : ObjectId("580a0c701ce125f75d7c98e8"), "title":"Lorem Ipsum Dolor Sit Amet2",
+         "comments_no":0
+   }
+)
+
+=>Add a field in your collection for all records
+db.posts.update({},{$set : {"comment_count":0}},{upsert:false,multi:true})
+db.posts.update({},{$set : {"post_content":'media/thumbnail.png'}},{upsert:false,multi:true})  
+
+=>Delete Field(Key) form records
+db.posts.update({ title: 'Lorem Ipsum Dolor Sit Amet2' }, { $unset : { comments_no : 1} });
+
+=>Drop a collection
+db.collectionName.drop()
+

@@ -1,0 +1,47 @@
+1.Download mongo db from
+https://www.mongodb.com/download-center#community
+ here you will get a msi file for windows.
+
+Just install simply follow steps.
+
+2.After Installation follow these steps:
+http://stackoverflow.com/questions/20796714/what-is-the-way-to-start-mongo-db-from-windows-7-64-bit
+
+3.Create a connection in robo mongo to click on create button
+after this you have a connection like http://localhost:27017/
+if all things have gone well then you will got msg:
+"It looks like you are trying to access MongoDB over HTTP on the native driver port."
+
+4.Now we will create a folder to store data.
+We are creating inside "C:\Program Files\MongoDB"
+=>data=>db
+Note:you can create db folder anywhere, any drive.
+
+=====My Recommendation===========
+"C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe" --dbpath "C:\data\db"
+This will be run in every situtation like(in corporate or personal).
+
+MongoDB requires a data directory to store all data. MongoDB’s default data directory path is \data\db. 
+Create this folder using the following commands from a Command Prompt:
+
+You can specify an alternate path for data files using the --dbpath option to mongod.exe, for example:
+=>enter this command
+	C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe --dbpath C:\Program Files\MongoDB\data\db
+	
+	If your path includes spaces, enclose the entire path in double quotes, for example:
+	"C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe" --dbpath "C:\Program Files\MongoDB\data\db"
+	
+	You may also specify the dbpath in a configuration file.
+	
+	To start MongoDB, run mongod.exe. For example, from the Command Prompt:
+	C:\mongodb\bin\mongod.exe
+	
+	To connect to MongoDB through the mongo.exe shell, open another Command Prompt.
+	C:\mongodb\bin\mongo.exe
+
+Note:For more info go to:
+http://stackoverflow.com/questions/20796714/what-is-the-way-to-start-mongo-db-from-windows-7-64-bit
+
+For playing with mongo in shell:
+http://cwbuecheler.com/web/tutorials/2013/node-express-mongo/
+	

@@ -1,0 +1,39 @@
+1.Run Express js file.
+cd myapp
+Synatx: myapp>node "Server side js file name"
+Example myapp>node index.js
+
+If No error there then msg will be come,
+"Example app listening on port 3000!"
+if mysql also connected then msg in second line show
+"You are now connected".
+
+2.Install http server globally
+Command:npm install http-server -g
+
+Now you can run a server via the following commands:
+$ cd MyApp
+$ http-server
+
+3.For cross origin request add this in server side js file
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+
+==============Important Links====================
+1.http://expressjs.com/en/starter/installing.html
+
+2.https://www.terlici.com/2015/08/13/mysql-node-express.html
+
+3.http://enable-cors.org/server_expressjs.html
+
+4.https://www.codementor.io/nodejs/tutorial/node-js-mysql
+
+5.https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#The_replacer_parameter
+
+5.http://stackoverflow.com/questions/6084360/using-node-js-as-a-simple-web-server
+
+6.https://docs.npmjs.com/

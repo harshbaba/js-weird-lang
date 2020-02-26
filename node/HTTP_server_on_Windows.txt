@@ -1,0 +1,39 @@
+=========Setting up HTTP server on Windows with Node.js====
+=>.Check node is installed or not
+=>open terminal and paste node -v
+	if it shows node version, it means node is installed.
+	
+1.Download node js from https://nodejs.org
+2.During installation choose npm package manager.
+3.Open command prompt.
+4.Run this command to install a HTTP server: npm install http-server -g
+5.And start the HTTP server: http-server /path/to/docroot with a path to the folder you want to share. 
+Your folder must have some files before it works.
+6.Now just open http://localhost:8080/myapp in your browser.
+7.CTRL+C to stop server.
+
+
+======Install MongoDb on windows======
+1.Download Mongo form https://www.mongodb.com/download-center#community
+2.Make installation.
+3.Cut your MongoDb folder from "Program Files" and paste it to C: Drive
+4.Now make a data folder in c: drive "data/db".
+5.Open CMD and browse to mongoDb bin folder and type "mongod"
+6.waiting for connections on port 27017
+=>if it shows then your connection to db server has been made.
+7.Now check if mongoDb shell is working or not
+	=>just browse bin folder as earlier in new cmd(dont close previous CMD box)
+	=>type "mongo" and run
+8.If it shows connection to test it means it's working fine
+9.Now lets just make a simple data entry to know if its working or not
+=>a.show dbs (for show all dbs)
+=>use DB_NAME (create new db)
+	ex-> use movies
+	output:switched to db movies.
+=>db.createCollection("mycollection")
+=>db.mycollection.insert({movie3:"Paheli"})
+	if it shows write result it means record has been stored.
+Show All records:
+=>db.mycollection.find()
+
+Refernce Url:https://www.youtube.com/watch?v=t3Cnz9GulXY

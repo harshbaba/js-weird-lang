@@ -1,0 +1,25 @@
+{{#if this.harsh}}
+        <h3>hello</h3>
+{{/if}}
+
+router.get('/automated-manifest', function(req, res, next) {
+	res.render('../views/modules/shipments/automated-manifest', {
+		harsh: true,
+		layout:'../views/themes/myToll.html'
+	});
+});
+
+
+======================================
+In Url:
+http://10.112.132.67:3005/pickups/book?template=1001
+
+router.get('/book', function(req, res, next) {
+	var template = '../views/modules/pickups/book';
+	if (req.query.template) {
+		template = '../views/modules/pickups/book-'+req.query.template;
+	}
+	res.render(template, {
+	
+	});
+});

@@ -1,0 +1,12 @@
+Step1:
+npm config set proxy http://hcltech%5Charshsingh.y:harsh%23123456@noida-sez-v10k.hclt.corp.hcl.in:8080/
+
+Step2:
+npm config set https-proxy http://hcltech%5Charshsingh.y:harsh%23123456@noida-sez-v10k.hclt.corp.hcl.in:8080/
+
+Step3:
+npm config set registry http://registry.npmjs.org/
+
+================Note(Reference Url):============================
+https://stackoverflow.com/questions/24244684/npm-install-not-work
+https://www.w3schools.com/tags/ref_urlencode.asp

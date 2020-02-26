@@ -1,0 +1,11 @@
+Event delegation is an event handling technique where, instead of attaching event handlers directly to every element 
+you want to listen to events on, you attach a single event handler to a parent element of 
+those elements to listen for events occurring on its descendant elements.
+When handling the event, you check which element fired the event, and respond accordingly.
+Event delegation relies on event bubbling in the DOM. 
+This is the process whereby an event triggered on a child element propagates up the DOM tree to its parent element, 
+and its parent�s parent element, etc., until the document is reached. Bubbling can also be stopped
+by the programmer using event.stopPropagation(). 
+Note that not all DOM events propagate focus, blur, load, and unload don�t.
+
+https://www.sitepoint.com/event-delegation-with-jquery/

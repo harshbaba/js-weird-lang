@@ -1,0 +1,112 @@
+================Pass Date from Parent to child component=========
+*For this we will use @Input Decorator.
+=>Call child component in parentComponent html file like below:
+<app-header [myNameParam]="myName"></app-header>
+=><app-header> is a selector of header component, here we have called this inside 
+app.component.html file.
+
+=>Open parent componet(app.component.ts)
+export class AppComponent implements OnInit{
+  
+  myName: string;
+  constructor(){ }
+  
+  ngOnInit(){
+    this.myName = "harsh yadav";
+  }
+}
+
+=>here you can see we have declared "myName" is a string type then inside onInit we have assigned a value.
+=>During call child component pass this variable in a key like this: 
+[myNameParam]="myName"
+
+=>Here parent component work is complete, now we have to get this variable in child component
+=>Open child component file (header.component.ts)
+=>Here you can add Input decorator via 2 ways:
+1.In component decorator
+@Component({
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css'],
+  inputs: ['myNameParam']
+})
+
+2.
+@Input('myNameParam') myNameParam: string;
+
+Note:I will recommend first approach, because from first approach we can list all input variable at one place.
+=>Now you can get this data in your component html file via interpolation {{}}
+ex: <h3>{{myNameParam}}</h3> //header.component.html
+
+
+==================Pass Data from child component to parent component with Output and EventEmitter============
+=>Open Child component file (header.component.ts)
+=>Import EventEmitter
+Ex:import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
+=>add outputs in @component decorator like we have add "childData"
+@Component({
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css'],
+  outputs:['childData']
+})
+
+=>Create a emitter inside class
+childData = new EventEmitter<string>();
+
+export class HeaderComponent implements OnInit {
+  
+  childData = new EventEmitter<string>();
+  constructor() { }
+
+  ngOnInit() {
+  }
+}
+
+=> You can send data onNgInit (after constructor) or during any event like click or keyup, we will send data on click, so we will add a function inside class
+Ex:  
+<h3 (click)="sendChildValue($event)">Send child data</h3>
+
+sendChildValue($event){
+	this.childData.emit('child component value');
+}
+
+=>
+export class HeaderComponent implements OnInit {
+  
+  childData = new EventEmitter<string>();
+  constructor() { }
+
+  ngOnInit() {
+  }
+  
+  sendChildValue($event){
+	this.childData.emit('child component value');
+  }
+}
+
+=> Now you have to assign this output variable in child component, like this
+<app-header (childData)="recieveChildData($event)"></app-header>
+
+=>Here child component work is done, now open parent component file to get this data(app.component.ts)
+=>Initalize a variable inside class, we are creatin a variable "childCompData" is of string type, after create a function to assign value in this variable
+export class AppComponent implements OnInit{
+	public childCompData: string;
+	
+	recieveChildData($event){
+		this.childCompData = $event;
+	}
+}
+
+=>We were used "recieveChildData" in calling time:
+<app-header (childData)="recieveChildData($event)"></app-header>
+
+=>Now you can show child data in parent html file (app.component.html)
+<h3>childcomponentData: {{childCompData}}</h3>
+
+
+=====Reference Url===============
+https://www.youtube.com/watch?v=I317BhehZKM
+https://www.youtube.com/watch?v=bKWDKmHvF78
+https://scotch.io/tutorials/3-ways-to-pass-async-data-to-angular-2-child-components

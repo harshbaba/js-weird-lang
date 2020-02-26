@@ -1,0 +1,8 @@
+1.start http server http-server -g
+2.start mongodb server 
+C:\MongoDB\Server\3.2\bin\mongod
+
+3.if you want to play mongodb commands in terminal
+C:\MongoDB\Server\3.2\bin\mongo
+
+Note:make sure you open administrator command prompt.

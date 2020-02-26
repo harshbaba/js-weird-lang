@@ -1,0 +1,4 @@
+https://www.itprotoday.com/devops-and-software-development/object-based-vs-object-oriented-environments
+https://stackoverflow.com/questions/15430004/core-difference-between-object-oriented-and-object-based-language
+https://stackoverflow.com/questions/6954293/difference-between-object-oriented-and-object-based-language
+https://en.wikipedia.org/wiki/Object-based_language

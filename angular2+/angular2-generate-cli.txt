@@ -1,0 +1,32 @@
+=>Creating new project
+ng new PROJECT_NAME
+
+=>Serve project
+ng serve
+
+Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+You can configure the default HTTP port and the one used by the LiveReload server with two command-line options :
+ng serve --host 0.0.0.0 --port 4201 --live-reload-port 49153
+
+=>.For creating component
+ng g component componentName
+
+=>.For creating module
+ng g module app-routing
+
+=>For create Services
+ng g service pnr-status
+
+=>For Creating Guards
+ng g guard auth
+
+=> For creating Directives
+ng g directive auto-complete-trains
+
+=>when two moduls be there then you should run command with module name
+ng g c new-component --module app
+
+
+For see other command go to
+https://www.npmjs.com/package/angular-cli
+

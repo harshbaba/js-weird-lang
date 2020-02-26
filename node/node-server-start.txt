@@ -1,0 +1,22 @@
+1.Check node is installed or not
+=>open terminal and paste node -v
+	if it shows node version, it means node is installed.
+
+2.How to start node server
+=>Create a folder anywhere and put all projects inside this, like we place all projects
+inside htdocs folder.
+We are considering you have a folder "www" inside "D" drive 
+and create your projects here like: helloworld, test1
+
+=> for starting server
+	=>open terminal
+	=>go to D:\www 
+	and run http-server -go
+
+Now you can open your project in browser at http://10.0.2.2:8080/
+like: http://10.0.2.2:8080/helloworld/
+http://10.0.2.2:8080/myapp
+
+3.CTRL+C to stop server.
+
+=======END============

@@ -1,0 +1,28 @@
+To Use Encapsulation in our component import it from angular core and define it inside @component decorator.
+import { Component, OnInit, ViewEncapsulation} from '@angular/core';
+@Component({
+  selector: 'app-live-trains',
+  templateUrl: './live-trains.component.html',
+  styleUrls: ['./live-trains.component.css'],
+  encapsulation: ViewEncapsulation.None,
+  providers: [LiveTrainService, GlobalHelper, LinkService]
+})
+
+# ViewEncapsulation.emulated
+a.Angular will not create a Shadow DOM for the component.
+b.Style will be scoped to the component.
+c.This is the default value for encapsulation.
+
+# ViewEncapsulation.None
+a.There is no shadow DOM.
+b.Style is not scoped to the component.
+
+#ViewEncapsulation.Native
+a.Angular will create a Shadow DOM for the component.
+b.Style will be scoped to the component.
+Note:This require Shadow Dom feature so if your browser does not support it then it will not work.
+To solve this problem angular has create "emulated". Because "emulated" work as Natively (mostly same as Shadow Dom) but
+not require Shadow Dom Browsers.
+
+https://codecraft.tv/courses/angular/components/templates-styles-view-encapsulation/
+https://dzone.com/articles/what-is-viewencapsulation-in-angular

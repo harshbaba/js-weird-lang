@@ -1,0 +1,15 @@
+D:\www>npm install http-server -g
+D:\Users\harshsingh.y\AppData\Roaming\npm\http-server -> D:\Users\harshsingh.y\AppData\Roaming\npm\node_modules\http-server\bin\http-server
+D:\Users\harshsingh.y\AppData\Roaming\npm\hs -> D:\Users\harshsingh.y\AppData\Roaming\npm\node_modules\http-server\bin\http-server
+D:\Users\harshsingh.y\AppData\Roaming\npm
+`-- http-server@0.10.0
+
+==System Variable===
+C:\ProgramData\Oracle\Java\javapath;%SystemRoot%\system32;
+%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;
+C:\Windows\CCM;C:\Program Files\nodejs\;
+C:\Program Files\Git\cmd;
+D:\Users\harshsingh.y\AppData\Roaming\npm;
+D:\Users\harshsingh.y\AppData\Roaming\npm\http-server
+
+==User Variable===

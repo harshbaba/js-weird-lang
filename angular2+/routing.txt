@@ -1,0 +1,23 @@
+1.For enabling and create routes:
+https://shermandigital.com/blog/configure-routing-in-an-angular-cli-project/
+
+2.Create Menu
+<ul class="nav navbar-nav">
+  <li>
+    <a routerLink="about">About</a>
+  </li>
+  <li>
+    <a routerLink="services">Services</a>
+  </li>
+</ul>
+
+3.Redirect to Default page and If redirect to 404 page
+{ 
+    path: '',   
+    redirectTo: '/dashboard',
+    pathMatch: 'full', 
+},
+{ 
+    path: '**', 
+    component: FourZeroFourComponent
+}

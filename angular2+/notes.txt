@@ -1,0 +1,2 @@
+Use @auth0/angular-jwt instead of angular2-jwt for angular 5 and above.This will create issue during project build.
+https://www.npmjs.com/package/@auth0/angular-jwt

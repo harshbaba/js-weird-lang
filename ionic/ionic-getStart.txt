@@ -1,0 +1,26 @@
+>npm install -g ionic cordova
+>ionic start helloWorld blank
+
+#https://ionicframework.com/appflow
+#https://ionicframework.com/docs/appflow/devapp/
+
+>ionic generate page about-us
+
+>For go to another page
+<button ion-button (click)="onGoToTrainAvailability()">Train Availability</button>
+onGoToTrainAvailability(){
+
+this.navCtrl.push(TrainAvailabilityPage);
+
+}
+Note:Make sure some points
+1.Nav ctrl should be import 
+import { NavController } from 'ionic-angular';
+2.Page should be import in app.module.ts
+import { TrainAvailabilityPage } from './../pages/train-availability/train-availability';
+3.Page should be add inside decalrations as well as entryComponent.
+
+>For go to another page (another approach)
+
+>For creating service in ionic 3
+example: ionic generate provider liveStation

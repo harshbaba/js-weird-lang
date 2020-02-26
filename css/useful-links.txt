@@ -1,0 +1,1 @@
+https://jonsuh.com/hamburgers/

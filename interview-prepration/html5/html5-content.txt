@@ -1,0 +1,15 @@
+1.Key New Feature of HTML5
+
+2.Web Workers
+https://www.w3schools.com/html/html5_webworkers.asp
+
+2.SSE
+https://www.w3schools.com/html/html5_serversentevents.asp
+
+3.HTML5 Web Storage
+a.Local Storage
+b.Session Storage
+c.Capacity of web storage
+
+https://www.w3schools.com/html/html5_webstorage.asp
+

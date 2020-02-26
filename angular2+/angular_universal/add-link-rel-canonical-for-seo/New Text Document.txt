@@ -1,0 +1,14 @@
+=================We have to add <link rel="canonical" href="page_url"> at each page with page url, it will help to SEO=========
+
+1.Create a service LinkService(File Attached)
+2.Import at your component
+import { LinkService } from './../../services/link-service';
+3.Put in providers
+4.Add in constructor
+public _linkService: LinkService
+5.Now you can use inside constructor like this:
+this._linkService.addTag( { rel: 'canonical', href: 'https://enquiryrailway.in/train-availability' } );
+
+
+=======reference url==============
+https://github.com/angular/angular/issues/15776

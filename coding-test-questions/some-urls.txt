@@ -1,0 +1,4 @@
+https://coderbyte.com/course/arrays-and-lists
+https://www.interviewcake.com/question/javascript/bracket-validator?
+https://medium.com/coderbyte/a-tricky-javascript-interview-question-asked-by-google-and-amazon-48d212890703
+https://thatjsdude.com/interview/js1.html
