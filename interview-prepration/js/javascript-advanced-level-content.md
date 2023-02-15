@@ -9,13 +9,13 @@
     https://www.youtube.com/watch?v=8aGhZQkoFbQ
 
 13. Page Performance & Optimization
-    a.HTTP requests reduction
-    b.File compression
-    c.Web caching optimization
-    d.Code minification
-    e.Image Optimization 
-    f.Avoid Redirects
-    g.SSL certificate/ HTTPS
+    a. HTTP requests reduction
+    b. File compression
+    c. Web caching optimization
+    d. Code minification
+    e. Image Optimization 
+    f. Avoid Redirects
+    g. SSL certificate/ HTTPS
 
     https://apiumhub.com/tech-blog-barcelona/web-performance-optimization-techniques/
 
