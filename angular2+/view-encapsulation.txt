@@ -8,14 +8,18 @@ import { Component, OnInit, ViewEncapsulation} from '@angular/core';
   providers: [LiveTrainService, GlobalHelper, LinkService]
 })
 
+
+# ViewEncapsulation.None
+a.There is no shadow DOM.
+b.Style is not scoped to the component.
+
+
 # ViewEncapsulation.emulated
 a.Angular will not create a Shadow DOM for the component.
 b.Style will be scoped to the component.
 c.This is the default value for encapsulation.
 
-# ViewEncapsulation.None
-a.There is no shadow DOM.
-b.Style is not scoped to the component.
+
 
 #ViewEncapsulation.Native
 a.Angular will create a Shadow DOM for the component.

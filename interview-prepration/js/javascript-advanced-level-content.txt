@@ -1,29 +1,27 @@
-2.Event Loop
-https://flaviocopes.com/javascript-event-loop/
-https://medium.com/front-end-weekly/javascript-event-loop-explained-4cd26af121d4
-https://hackernoon.com/understanding-js-the-event-loop-959beae3ac40
-https://www.youtube.com/watch?v=8aGhZQkoFbQ
+12.Event Loop
+    https://flaviocopes.com/javascript-event-loop/
+    https://medium.com/front-end-weekly/javascript-event-loop-explained-4cd26af121d4
+    https://hackernoon.com/understanding-js-the-event-loop-959beae3ac40
+    https://www.youtube.com/watch?v=8aGhZQkoFbQ
 
-3.Page Performance & Optimization
-a. HTTP requests reduction
-b.File compression
-c.Web caching optimization
-d.Code minification
-e.Image Optimization 
-f.Avoid Redirects
-g.SSL certificate/ HTTPS
+13.Page Performance & Optimization
+    a.HTTP requests reduction
+    b.File compression
+    c.Web caching optimization
+    d.Code minification
+    e.Image Optimization 
+    f.Avoid Redirects
+    g.SSL certificate/ HTTPS
 
-
-https://apiumhub.com/tech-blog-barcelona/web-performance-optimization-techniques/
-
+    https://apiumhub.com/tech-blog-barcelona/web-performance-optimization-techniques/
 
 14.JavaScript Design Patterns
-a.Module Design Pattern
-b.Prototype Design Pattern
-c.Observer Design Pattern
-d.Singleton
+    a.Module Design Pattern
+    b.Prototype Design Pattern
+    c.Observer Design Pattern
+    d.Singleton
 
-https://scotch.io/bar-talk/4-javascript-design-patterns-you-should-know
+    https://scotch.io/bar-talk/4-javascript-design-patterns-you-should-know
 
 
 15.Module Formats

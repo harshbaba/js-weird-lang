@@ -20,6 +20,7 @@
 19.What is namespacing in javascript and what it does
 20.Object Based vs Object Oriented
 21.Data types in JavaScript
+23.Web workers vs Service workers vs Worklets
 
 
 ====Advanced Level===
@@ -68,5 +69,16 @@ Quick Sort
 8.Block-Scoped Constructs Let and Const
 9.Classes in ES6
 10.Modules in ES6
+11.Rest & Spread Operator
+
+
+
+
+https://webapplog.com/es6/
+https://www.javascripttutorial.net/es6/
+https://www.javascripttutorial.net/es6/destructuring/
 
 #https://coderbyte.com/algorithm/map-reduce-filter-javascript-functional-programming
+
+========OOPS======
+1.https://www.tutorialspoint.com/how-to-implement-polymorphism-in-javascript

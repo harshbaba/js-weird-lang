@@ -67,3 +67,6 @@ var harsh = new Person("harsh","yadav",28,"brown");
 checkObj.manAge.call(harsh);
 
 
+
+
+

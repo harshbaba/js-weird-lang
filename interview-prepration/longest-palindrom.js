@@ -32,4 +32,11 @@ while(0 < string.length){
 console.log(palindromeObj);
 
 
+function add(...args){
+    let result = 0;
+    for(let arg in args) result = result+arg;
+    return result;
+}
+
+
 

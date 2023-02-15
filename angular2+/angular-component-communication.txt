@@ -1,3 +1,5 @@
+https://www.digitalocean.com/community/tutorials/angular-component-communication
+
 ================Pass Date from Parent to child component=========
 *For this we will use @Input Decorator.
 =>Call child component in parentComponent html file like below:
@@ -106,7 +108,16 @@ export class AppComponent implements OnInit{
 <h3>childcomponentData: {{childCompData}}</h3>
 
 
+
+
+
+
+=====================Pass data in unrelated components(or sibling components)using shared services============
+https://enlear.academy/sharing-data-between-angular-components-f76fa680bf76
+
+
+
 =====Reference Url===============
 https://www.youtube.com/watch?v=I317BhehZKM
 https://www.youtube.com/watch?v=bKWDKmHvF78
-https://scotch.io/tutorials/3-ways-to-pass-async-data-to-angular-2-child-components
+https://www.digitalocean.com/community/tutorials/angular-component-communication

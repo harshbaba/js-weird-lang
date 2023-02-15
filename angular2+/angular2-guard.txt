@@ -68,3 +68,4 @@ export class AuthGuard implements CanActivate {
 
 ===================Refernce Url==========
 https://scotch.io/tutorials/protecting-angular-v2-routes-with-canactivatecanactivatechild-guards
+https://codeburst.io/understanding-angular-guards-347b452e1892
