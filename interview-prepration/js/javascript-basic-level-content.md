@@ -121,7 +121,7 @@ Hoisting is JavaScript's default behavior of moving all declarations to the top 
     [Reference Link](https://www.w3schools.com/js/js_datatypes.asp)
 
 22. difference-between-typescript-and-javascript
-    https://www.geeksforgeeks.org/difference-between-typescript-and-javascript/
+    [Reference Link](https://www.geeksforgeeks.org/difference-between-typescript-and-javascript/)
 
 23. Web workers vs Service workers vs Worklets
     Service workers are a proxy between the browser and the network. By intercepting requests made 
