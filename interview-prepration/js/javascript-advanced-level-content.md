@@ -1,7 +1,11 @@
+### Javascript Advanced level content
 12. Event Loop
     https://flaviocopes.com/javascript-event-loop/
+
     https://medium.com/front-end-weekly/javascript-event-loop-explained-4cd26af121d4
+
     https://hackernoon.com/understanding-js-the-event-loop-959beae3ac40
+
     https://www.youtube.com/watch?v=8aGhZQkoFbQ
 
 13. Page Performance & Optimization
@@ -38,6 +42,7 @@ A module loader interprets and loads a module written in a certain module format
 A module bundler replaces a module loader and generates a bundle of all code at build time. Popular examples are Browserify and Webpack.
 
 https://www.jvandemo.com/a-10-minute-primer-to-javascript-modules-module-formats-module-loaders-and-module-bundlers/
+
 https://stackoverflow.com/questions/38864933/what-is-difference-between-module-loader-and-module-bundler-in-javascript
 
 18. Shadow Dom
