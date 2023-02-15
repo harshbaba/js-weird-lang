@@ -38,32 +38,34 @@ Note that not all DOM events propagate focus, blur, load, and unload don't.
 10. Hoisting in Java Script
 Hoisting Variables 
 Hoisting functions
-```sh
-Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope 
-(to the top of the current script or the current function).
-```
+
+Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function).
+
 [Reference Link Scotch.io](https://scotch.io/tutorials/understanding-hoisting-in-javascript)
 
 [Reference Link W3Schools](https://www.w3schools.com/js/js_hoisting.asp)
 
-[Reference Link Medium](https://medium.com/javascript-in-plain-english/)https-medium-com-javascript-in-plain-english-what-is-hoisting-in-javascript-a63c1b2267a1)
+[Reference Link Medium](https://medium.com/javascript-in-plain-english/)
+
+[Reference Link Medium](https-medium-com-javascript-in-plain-english-what-is-hoisting-in-javascript-a63c1b2267a1)
 
 
 11. JS Strict Mode
+
 [Reference Link W3](https://www.w3schools.com/js/js_strict.asp)
 
 12. Closure
-```sh
+
     A closure is a function having access to the parent scope, even after the parent function has closed.
-```
+
 [Reference Link](https://www.w3schools.com/js/js_function_closures.asp)
 
 13. CallBack
-```sh
+
     A callback is a function that is to be executed after another function has finished executing — hence the name ‘call back’.
     In JavaScript, functions are objects. Because of this, functions can take functions as arguments, and can be returned by other functions. 
     Functions that do this are called higher-order functions. Any function that is passed as an argument is called a callback function.
-```
+
 [Reference Link](https://codeburst.io/javascript-what-the-heck-is-a-callback-aba4da2deced)
 
 14. Service Workers for Offline App
@@ -116,11 +118,13 @@ Hoisting is JavaScript's default behavior of moving all declarations to the top 
 20. Object Based vs Object Oriented
 
 21. Data types in JavaScript
+    
     [Reference Link](https://medium.com/@junshengpierre/javascript-primitive-values-object-references-361cfc1cbfb0)
     
     [Reference Link](https://www.w3schools.com/js/js_datatypes.asp)
 
 22. difference-between-typescript-and-javascript
+    
     [Reference Link](https://www.geeksforgeeks.org/difference-between-typescript-and-javascript/)
 
 23. Web workers vs Service workers vs Worklets
