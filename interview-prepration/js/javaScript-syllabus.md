@@ -74,7 +74,9 @@
 
 ### Links
 [webapplog ES6](https://webapplog.com/es6/)
+
 [javascripttutorial ES6](https://www.javascripttutorial.net/es6/)
+
 [javascripttutorial destructuring](https://www.javascripttutorial.net/es6/destructuring/)
 
 [functional-programming](https://coderbyte.com/algorithm/map-reduce-filter-javascript-functional-programming)
