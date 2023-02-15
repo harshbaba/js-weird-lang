@@ -38,10 +38,10 @@
 12. Recursion 
 13. Map, reduce, and filter
 14. JavaScript Design Patterns
-    * .Module Design Pattern
-    * .Prototype Design Pattern
-    * .Observer Design Pattern
-    * .Singleton
+* Module Design Pattern
+* Prototype Design Pattern
+* Observer Design Pattern
+* Singleton
 15. Module Formats
 16. Module Loaders
 17. Module Bundlers
@@ -50,35 +50,34 @@
 
 
 
+### Algo
+1. Searching
+* Binary Search
+2. Sorting
+* Bubble sort
+* Quick Sort
 
-=======Algo========
-1.Searching
-a.Binary Search
-2.Sorting
-Bubble sort
-Quick Sort
-
-=======ES6 Features========
-1.Default Parameters in ES6
-2.Template Literals in ES6
-3.Multi-line Strings in ES6
-4.Destructuring Assignment in ES6
-5.Enhanced Object Literals in ES6
-6.Arrow Functions in ES6
-7.Promises in ES6
-8.Block-Scoped Constructs Let and Const
-9.Classes in ES6
-10.Modules in ES6
-11.Rest & Spread Operator
-
+### ES6 Features
+1. Default Parameters in ES6
+2. Template Literals in ES6
+3. Multi-line Strings in ES6
+4. Destructuring Assignment in ES6
+5. Enhanced Object Literals in ES6
+6. Arrow Functions in ES6
+7. Promises in ES6
+8. Block-Scoped Constructs Let and Const
+9. Classes in ES6
+10. Modules in ES6
+11. Rest & Spread Operator
 
 
 
-https://webapplog.com/es6/
-https://www.javascripttutorial.net/es6/
-https://www.javascripttutorial.net/es6/destructuring/
+### Links
+[webapplog ES6](https://webapplog.com/es6/)
+[javascripttutorial ES6](https://www.javascripttutorial.net/es6/)
+[javascripttutorial destructuring](https://www.javascripttutorial.net/es6/destructuring/)
 
-#https://coderbyte.com/algorithm/map-reduce-filter-javascript-functional-programming
+[functional-programming](https://coderbyte.com/algorithm/map-reduce-filter-javascript-functional-programming)
 
-========OOPS======
-1.https://www.tutorialspoint.com/how-to-implement-polymorphism-in-javascript
+### OOPS
+[polymorphism](https://www.tutorialspoint.com/how-to-implement-polymorphism-in-javascript)
