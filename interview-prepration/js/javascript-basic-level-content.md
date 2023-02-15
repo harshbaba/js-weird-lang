@@ -15,24 +15,31 @@ Note that not all DOM events propagate focus, blur, load, and unload don't.
 [Reference Link](https://medium.com/@vsvaibhav2016/event-bubbling-and-event-capturing-in-javascript-6ff38bec30e)
 
 3. stoppropagation-vs-stopimmediatepropagation
+
 [Reference Link](https://codeplanet.io/preventdefault-vs-stoppropagation-vs-stopimmediatepropagation/)
 
 4. event.preventDefault
+
 [Reference Link](https://codeplanet.io/preventdefault-vs-stoppropagation-vs-stopimmediatepropagation/)
 
 5. JS String Methods
+
 [Reference Link](https://www.w3schools.com/js/js_string_methods.asp)
 
 6. JS Number Methods
+
 [Reference Link](https://www.w3schools.com/js/js_numbers.asp)
 
 7. JS Array Methods
+
 [Reference Link](https://www.w3schools.com/js/js_array_methods.asp)
 
 8. JavaScript Regular Expressions
+
 [Reference Link](https://www.w3schools.com/js/js_regexp.asp)
 
 9. Js Scope
+
 [Reference Link](https://www.w3schools.com/js/js_scope.asp)
 
 10. Hoisting in Java Script
