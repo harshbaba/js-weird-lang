@@ -1,4 +1,6 @@
-1.Event Delegation
+### Javascript Basic level content
+1. Event Delegation
+```sh
 Event delegation is an event handling technique where, instead of attaching 
 event handlers directly to every element you want to listen to events on, 
 you attach a single event handler to a parent element of those elements to 
@@ -7,56 +9,62 @@ When handling the event, you check which element fired the event, and respond ac
 Event delegation relies on event bubbling in the DOM. 
 This is the process whereby an event triggered on a child element 
 propagates up the DOM tree to its parent element, 
-and its parent's parent element, etc., until the document is reached.
+and its parents parent element, etc., until the document is reached.
 Bubbling can also be stopped by the programmer using event.stopPropagation(). 
-Note that not all DOM events propagate focus, blur, load, and unload don't.
+Note that not all DOM events propagate focus, blur, load, and unload don't. 
 
-https://www.sitepoint.com/event-delegation-with-jquery/
+[Reference Link](https://www.sitepoint.com/event-delegation-with-jquery/)
+```
 
+2. Event Bubbling & Capturing
+```sh
+[Reference Link](https://medium.com/@vsvaibhav2016/event-bubbling-and-event-capturing-in-javascript-6ff38bec30e)
+```
 
-2.Event Bubbling & Capturing
-https://medium.com/@vsvaibhav2016/event-bubbling-and-event-capturing-in-javascript-6ff38bec30e
+3. stoppropagation-vs-stopimmediatepropagation
+[Reference Link](https://codeplanet.io/preventdefault-vs-stoppropagation-vs-stopimmediatepropagation/)
 
-3.stoppropagation-vs-stopimmediatepropagation
-https://codeplanet.io/preventdefault-vs-stoppropagation-vs-stopimmediatepropagation/
+4. event.preventDefault
+[Reference Link](https://codeplanet.io/preventdefault-vs-stoppropagation-vs-stopimmediatepropagation/)
 
-4.event.preventDefault
-https://codeplanet.io/preventdefault-vs-stoppropagation-vs-stopimmediatepropagation/
+5. JS String Methods
+[Reference Link](https://www.w3schools.com/js/js_string_methods.asp)
 
-5.JS String Methods
-https://www.w3schools.com/js/js_string_methods.asp
+6. JS Number Methods
+[Reference Link](https://www.w3schools.com/js/js_numbers.asp)
 
-6.JS Number Methods
-https://www.w3schools.com/js/js_numbers.asp
+7. JS Array Methods
+[Reference Link](https://www.w3schools.com/js/js_array_methods.asp)
 
-7.JS Array Methods
-https://www.w3schools.com/js/js_array_methods.asp
+8. JavaScript Regular Expressions
+[Reference Link](https://www.w3schools.com/js/js_regexp.asp)
 
-8.JavaScript Regular Expressions
-https://www.w3schools.com/js/js_regexp.asp
+9. Js Scope
+[Reference Link](https://www.w3schools.com/js/js_scope.asp)
 
-9.Js Scope
-https://www.w3schools.com/js/js_scope.asp
-
-10.Hoisting in Java Script
-a.Hoisting Variables 
-b.Hoisting functions
-
+10. Hoisting in Java Script
+Hoisting Variables 
+Hoisting functions
+```sh
 Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope 
 (to the top of the current script or the current function).
 
-https://scotch.io/tutorials/understanding-hoisting-in-javascript
-https://www.w3schools.com/js/js_hoisting.asp
-https://medium.com/javascript-in-plain-english/https-medium-com-javascript-in-plain-english-what-is-hoisting-in-javascript-a63c1b2267a1
+[Reference Link Scotch.io](https://scotch.io/tutorials/understanding-hoisting-in-javascript)
 
-11.JS Strict Mode
-https://www.w3schools.com/js/js_strict.asp
+[Reference Link W3Schools](https://www.w3schools.com/js/js_hoisting.asp)
 
-12.Closure
+[Reference Link Medium](https://medium.com/javascript-in-plain-english/)https-medium-com-javascript-in-plain-english-what-is-hoisting-in-javascript-a63c1b2267a1)
+```
+
+11. JS Strict Mode
+[Reference Link W3](https://www.w3schools.com/js/js_strict.asp)
+
+12. Closure
+```sh
     A closure is a function having access to the parent scope, even after the parent function has closed.
-    https://www.w3schools.com/js/js_function_closures.asp
-
-13.CallBack
+    [Reference Link](https://www.w3schools.com/js/js_function_closures.asp)
+```
+13. CallBack
     A callback is a function that is to be executed after another function has finished executing — hence the name ‘call back’.
     In JavaScript, functions are objects. Because of this, functions can take functions as arguments, and can be returned by other functions. 
     Functions that do this are called higher-order functions. Any function that is passed as an argument is called a callback function.
