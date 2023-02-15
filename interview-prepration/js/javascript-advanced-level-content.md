@@ -1,10 +1,10 @@
-12.Event Loop
+12. Event Loop
     https://flaviocopes.com/javascript-event-loop/
     https://medium.com/front-end-weekly/javascript-event-loop-explained-4cd26af121d4
     https://hackernoon.com/understanding-js-the-event-loop-959beae3ac40
     https://www.youtube.com/watch?v=8aGhZQkoFbQ
 
-13.Page Performance & Optimization
+13. Page Performance & Optimization
     a.HTTP requests reduction
     b.File compression
     c.Web caching optimization
@@ -15,7 +15,7 @@
 
     https://apiumhub.com/tech-blog-barcelona/web-performance-optimization-techniques/
 
-14.JavaScript Design Patterns
+14. JavaScript Design Patterns
     a.Module Design Pattern
     b.Prototype Design Pattern
     c.Observer Design Pattern
@@ -24,9 +24,9 @@
     https://scotch.io/bar-talk/4-javascript-design-patterns-you-should-know
 
 
-15.Module Formats
-16.Module Loaders
-17.Module Bundlers
+15. Module Formats
+16. Module Loaders
+17. Module Bundlers
 
 To better understand tooling in modern JavaScript development environments, it is important to understand the differences between modules,
 module formats, module loaders and module bundlers.
@@ -40,6 +40,6 @@ A module bundler replaces a module loader and generates a bundle of all code at 
 https://www.jvandemo.com/a-10-minute-primer-to-javascript-modules-module-formats-module-loaders-and-module-bundlers/
 https://stackoverflow.com/questions/38864933/what-is-difference-between-module-loader-and-module-bundler-in-javascript
 
-18.Shadow Dom
-19.Virtual Dom
+18. Shadow Dom
+19. Virtual Dom
 https://www.stackchief.com/blog/Shadow%20DOM%20vs%20Virtual%20DOM
