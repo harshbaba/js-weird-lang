@@ -9,21 +9,21 @@
     https://www.youtube.com/watch?v=8aGhZQkoFbQ
 
 13. Page Performance & Optimization
-    a. HTTP requests reduction
-    b. File compression
-    c. Web caching optimization
-    d. Code minification
-    e. Image Optimization 
-    f. Avoid Redirects
-    g. SSL certificate/ HTTPS
+    * HTTP requests reduction
+    * File compression
+    * Web caching optimization
+    * Code minification
+    * Image Optimization 
+    * Avoid Redirects
+    * SSL certificate/ HTTPS
 
     https://apiumhub.com/tech-blog-barcelona/web-performance-optimization-techniques/
 
 14. JavaScript Design Patterns
-    a.Module Design Pattern
-    b.Prototype Design Pattern
-    c.Observer Design Pattern
-    d.Singleton
+    * Module Design Pattern
+    * Prototype Design Pattern
+    * Observer Design Pattern
+    * Singleton
 
     https://scotch.io/bar-talk/4-javascript-design-patterns-you-should-know
 
@@ -47,4 +47,5 @@ https://stackoverflow.com/questions/38864933/what-is-difference-between-module-l
 
 18. Shadow Dom
 19. Virtual Dom
+
 https://www.stackchief.com/blog/Shadow%20DOM%20vs%20Virtual%20DOM
