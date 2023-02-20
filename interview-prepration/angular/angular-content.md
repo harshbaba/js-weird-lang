@@ -1,5 +1,5 @@
-1.Angular Cli
-    
+1. Angular Cli
+    ```JavaScript
     ng new PROJECT_NAME
     ng g component componentName
     ng g module app-routing
@@ -7,14 +7,13 @@
     ng g guard auth
     ng g directive auto-complete-trains
 
-    =>when two moduls be there then you should run command with module name
+    =>when two moduls exists in your project then you should run command with module name:
     ng g c new-component --module app
+    ```
 
+    [For see other command go to](https://www.npmjs.com/package/angular-cli)
 
-    For see other command go to
-    https://www.npmjs.com/package/angular-cli
-
-2.Guard in Angular
+2. Guard in Angular
 
     Five types of route guards are provided by angular :
     CanActivate
