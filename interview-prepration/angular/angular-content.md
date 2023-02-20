@@ -15,42 +15,47 @@
     ```JavaScript
     ng g service pnr-status
     ```
-    ng g component componentName
-    ng g module app-routing
-    ng g service pnr-status
+    For Create routing guard:
+    ```JavaScript
     ng g guard auth
+    ```
+    For Create a directive:
+    ```JavaScript
     ng g directive auto-complete-trains
-
-    =>when two moduls exists in your project then you should run command with module name:
-    ng g c new-component --module app
+    ```
     
+
+    * when two moduls exists in your project then you should run command with module name:
+    ```JavaScript
+    ng g c new-component --module app
+    ```
 
     [For see other command go to](https://www.npmjs.com/package/angular-cli)
 
 2. Guard in Angular
 
     Five types of route guards are provided by angular :
-    CanActivate
-    CanActivateChild
-    CanLoad
-    CanDeactivate
-    Resolve
+    * CanActivate
+    * CanActivateChild
+    * CanLoad
+    * CanDeactivate
+    * Resolve
 
 
-    ===================Refernce Url==========
+    
     https://codeburst.io/understanding-angular-guards-347b452e1892
     https://scotch.io/tutorials/protecting-angular-v2-routes-with-canactivatecanactivatechild-guards
 
-4.Component Communication
+4. Component Communication
 
     https://enlear.academy/sharing-data-between-angular-components-f76fa680bf76
     https://www.digitalocean.com/community/tutorials/angular-component-communication
 
-5.AOT VS JIT
+5. AOT VS JIT
 
     https://medium.com/@jitubutwal144/basic-overview-of-just-in-time-jit-vs-ahead-of-time-aot-compilation-in-angular-applications-d24f04d8f7ca
 
-6.Observable
+6. Observable
 
     Observables provide support for passing messages between publishers and subscribers 
     in your application. 
@@ -78,7 +83,7 @@
     https://angular.io/guide/observables
     https://angular.io/guide/observables-in-angular
 
-7.Difference between Observables and Promises.
+7. Difference between Observables and Promises.
 
     An Observable is like a Stream (in many languages) and allows to pass zero or more events, 
     While A Promise handles a single event.
@@ -93,7 +98,7 @@
 
     https://stackoverflow.com/questions/37364973/what-is-the-difference-between-promises-and-observables
 
-8.View Encapsulation
+8. View Encapsulation
     In Angular, component CSS styles are encapsulated into the component's view and don't 
     affect the rest of the application. To control how this encapsulation happens on a per 
     component basis, set the view encapsulation mode in the component metadata.
@@ -121,7 +126,7 @@
 
 
 
-    #ViewEncapsulation.Native
+    # ViewEncapsulation.Native
     a.Angular will create a Shadow DOM for the component.
     b.Style will be scoped to the component.
     
@@ -132,7 +137,7 @@
     https://codecraft.tv/courses/angular/components/templates-styles-view-encapsulation/
     https://dzone.com/articles/what-is-viewencapsulation-in-angular
 
-9.Dependency Injection
+9. Dependency Injection
 
     Dependencies are services or objects that a class needs to perform its function. 
     Dependency injection, or DI, is a design pattern in which a class requests dependencies 
@@ -142,32 +147,32 @@
 
     https://angular.io/guide/dependency-injection
 
-10.Lazy Loading
+10. Lazy Loading
 
     https://www.zerone-consulting.com/how-to-create-lazy-loading-in-angular-4/
 
-11.Routing
+11. Routing
     
     https://shermandigital.com/blog/configure-routing-in-an-angular-cli-project/
 
-12.Angular Lifecycle
+12. Angular Lifecycle
 
     https://angular.io/guide/lifecycle-hooks
 
-13.sequence of Angular Lifecycle Hooks
+13. sequence of Angular Lifecycle Hooks
 
     https://angular.io/guide/lifecycle-hooks
 
-14.Pipes in Angular
+14. Pipes in Angular
 
     https://angular.io/guide/pipes
     https://scotch.io/tutorials/create-a-globally-available-custom-pipe-in-angular-2
 
-15.Directive
+15. Directive
 
     https://angular.io/guide/built-in-directives
 
-17.What is Angular and Why Angular?
+17. What is Angular and Why Angular?
     Angular is a development platform, built on TypeScript. As a platform, Angular includes:
 
     A component-based framework for building scalable web applications
@@ -183,23 +188,23 @@
     
     https://angular.io/guide/what-is-angular
 
-24.Current Version of Angular and new features
+24. Current Version of Angular and new features
 
     Angular 12
 
-25.What is environment in angular and how we can setup
+25. What is environment in angular and how we can setup
 
     https://balramchavan.medium.com/configure-and-build-angular-application-for-different-environments-7e94a3c0af23
     https://medium.com/@onlyyprasanth/how-to-manage-multiple-environments-with-angular-cli-angular-2-to-5-aa68d557fa77
     
-26.Event Emitters
+26. Event Emitters
 
     Angular provides an EventEmitter class that is used when publishing values 
     from a component through the @Output() decorator. EventEmitter extends RxJS Subject, 
     adding an emit() method so it can send arbitrary values. When you call emit(), 
     it passes the emitted value to the next() method of any subscribed observer.
 
-27.Subject vs BehaviorSubject vs ReplaySubject 
+27. Subject vs BehaviorSubject vs ReplaySubject 
     A subject is a special type of Observable which shares a single execution path among the 
     observers which results in a multicast (one to many).
 
@@ -212,15 +217,15 @@
     https://stackoverflow.com/questions/43118769/subject-vs-behaviorsubject-vs-replaysubject-in-angular
     https://devsuhas.com/2019/12/09/difference-between-subject-and-behaviour-subject-in-rxjs/
 
-28.Difference between Template-Driven and Reactive Forms in Angular
+28. Difference between Template-Driven and Reactive Forms in Angular
 
     https://www.pluralsight.com/guides/difference-between-template-driven-and-reactive-forms-angular
 
-29.whats-new-in-angular-8-features
+29. whats-new-in-angular-8-features
 
     https://www.credencys.com/blog/whats-new-in-angular-8-features/
 
-30.In which versions of angular you have worked, relaese date and explain features & differences.
+30. In which versions of angular you have worked, relaese date and explain features & differences.
 
     I have worked on Angular 5 & 8.
 
@@ -265,18 +270,18 @@
 
         https://www.credencys.com/blog/whats-new-in-angular-8-features/   
 
-31.Handle multiple API requests in Angular using mergeMap and forkJoin to avoid nested subscriptions
+31. Handle multiple API requests in Angular using mergeMap and forkJoin to avoid nested subscriptions
     
     https://nehalist.io/multiple-http-requests-in-angular/
     https://levelup.gitconnected.com/handle-multiple-api-requests-in-angular-using-mergemap-and-forkjoin-to-avoid-nested-subscriptions-a20fb5040d0c
     https://stackoverflow.com/questions/62937218/handle-multiple-api-requests-parallel-from-angular-8
     https://www.geekstrick.com/tech-talks/how-to-call-multiple-rest-api-and-subscribe-in-angular/
 
-32.Setvalue vs Patchvalue Angular reactive Form Group
+32. Setvalue vs Patchvalue Angular reactive Form Group
 
     https://sami-chkhachkhi.medium.com/setvalue-vs-patchvalue-angular-a64a55e912b8
 
-33.How an Angular App Work Behind The Scenes — The Angular Flow
+33. How an Angular App Work Behind The Scenes — The Angular Flow
 
     https://medium.com/siam-vit/how-an-angular-app-work-behind-the-scenes-angular-flow-dcc4d1df27bd
 
