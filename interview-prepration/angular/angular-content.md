@@ -1,35 +1,18 @@
 1. #### Angular Cli
-    For Create an Angular app:
+    Some Useful Angular cli commands:
     ```JavaScript
-    ng new PROJECT_NAME
-    ```
-    For Create a component:
-    ```JavaScript
-    ng g component componentName
-    ```
-    For Create routing module:
-    ```JavaScript
+    ng new PROJECT_NAME // create an angular project
+    ng g component componentName //For Create a component
     ng g module app-routing
-    ```
-    For Create a service:
-    ```JavaScript
     ng g service pnr-status
-    ```
-    For Create routing guard:
-    ```JavaScript
     ng g guard auth
-    ```
-    For Create a directive:
-    ```JavaScript
     ng g directive auto-complete-trains
     ```
-    
-
-    * when two moduls exists in your project then you should run command with module name:
+    when two moduls exists in your project then you should run command with module name:
     ```JavaScript
     ng g c new-component --module app
     ```
-
+    
     [For see other command go to](https://www.npmjs.com/package/angular-cli)
 
 2. Guard in Angular
@@ -44,6 +27,7 @@
 
     
     https://codeburst.io/understanding-angular-guards-347b452e1892
+
     https://scotch.io/tutorials/protecting-angular-v2-routes-with-canactivatecanactivatechild-guards
 
 4. Component Communication
@@ -81,6 +65,7 @@
 
 
     https://angular.io/guide/observables
+
     https://angular.io/guide/observables-in-angular
 
 7. Difference between Observables and Promises.
@@ -135,6 +120,7 @@
     not require Shadow Dom Browsers.
 
     https://codecraft.tv/courses/angular/components/templates-styles-view-encapsulation/
+
     https://dzone.com/articles/what-is-viewencapsulation-in-angular
 
 9. Dependency Injection
@@ -166,6 +152,7 @@
 14. Pipes in Angular
 
     https://angular.io/guide/pipes
+
     https://scotch.io/tutorials/create-a-globally-available-custom-pipe-in-angular-2
 
 15. Directive
@@ -195,6 +182,7 @@
 25. What is environment in angular and how we can setup
 
     https://balramchavan.medium.com/configure-and-build-angular-application-for-different-environments-7e94a3c0af23
+
     https://medium.com/@onlyyprasanth/how-to-manage-multiple-environments-with-angular-cli-angular-2-to-5-aa68d557fa77
     
 26. Event Emitters
@@ -215,6 +203,7 @@
     ReplaySubject - replays a specified number of last values to new subscribers
 
     https://stackoverflow.com/questions/43118769/subject-vs-behaviorsubject-vs-replaysubject-in-angular
+    
     https://devsuhas.com/2019/12/09/difference-between-subject-and-behaviour-subject-in-rxjs/
 
 28. Difference between Template-Driven and Reactive Forms in Angular
