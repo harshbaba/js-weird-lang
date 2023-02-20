@@ -28,7 +28,7 @@
     
     https://codeburst.io/understanding-angular-guards-347b452e1892
 
-    https://scotch.io/tutorials/protecting-angular-v2-routes-with-canactivatecanactivatechild-guards
+    https://www.digitalocean.com/community/tutorials/angular-route-guards
 
 4. Component Communication
 
