@@ -1,6 +1,20 @@
-1. Angular Cli
+1. #### Angular Cli
+    For Create an Angular app:
     ```JavaScript
     ng new PROJECT_NAME
+    ```
+    For Create a component:
+    ```JavaScript
+    ng g component componentName
+    ```
+    For Create routing module:
+    ```JavaScript
+    ng g module app-routing
+    ```
+    For Create a service:
+    ```JavaScript
+    ng g service pnr-status
+    ```
     ng g component componentName
     ng g module app-routing
     ng g service pnr-status
@@ -9,7 +23,7 @@
 
     =>when two moduls exists in your project then you should run command with module name:
     ng g c new-component --module app
-    ```
+    
 
     [For see other command go to](https://www.npmjs.com/package/angular-cli)
 
