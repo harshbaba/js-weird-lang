@@ -89,6 +89,7 @@
     component basis, set the view encapsulation mode in the component metadata.
 
     To Use Encapsulation in our component import it from angular core and define it inside @component decorator.
+    ```JavaScript
     import { Component, OnInit, ViewEncapsulation} from '@angular/core';
     @Component({
     selector: 'app-live-trains',
@@ -97,21 +98,21 @@
     encapsulation: ViewEncapsulation.None,
     providers: [LiveTrainService, GlobalHelper, LinkService]
     })
+    ```
 
-
-    # ViewEncapsulation.None
+    #### ViewEncapsulation.None
     a.There is no shadow DOM.
     b.Style is not scoped to the component.
 
 
-    # ViewEncapsulation.emulated
+    #### ViewEncapsulation.emulated
     a.Angular will not create a Shadow DOM for the component.
     b.Style will be scoped to the component.
     c.This is the default value for viewEncapsulation.
 
 
 
-    # ViewEncapsulation.Native
+    #### ViewEncapsulation.Native
     a.Angular will create a Shadow DOM for the component.
     b.Style will be scoped to the component.
     
@@ -203,7 +204,7 @@
     ReplaySubject - replays a specified number of last values to new subscribers
 
     https://stackoverflow.com/questions/43118769/subject-vs-behaviorsubject-vs-replaysubject-in-angular
-    
+
     https://devsuhas.com/2019/12/09/difference-between-subject-and-behaviour-subject-in-rxjs/
 
 28. Difference between Template-Driven and Reactive Forms in Angular
