@@ -275,6 +275,16 @@
 
     https://medium.com/siam-vit/how-an-angular-app-work-behind-the-scenes-angular-flow-dcc4d1df27bd
 
+1. Angular Interview Questions for Senior/Staff/ 
+    Architect developer position [Part 1–2023]
+
+    https://balramchavan.medium.com/angular-interview-questions-for-senior-staff-architect-developer-position-part-1-2023-f7f725537049
+
+1. Angular Interview Questions for Senior/Staff/ 
+    Architect developer position [Part 2–2023]
+
+    https://balramchavan.medium.com/angular-interview-questions-for-senior-staff-architect-developer-position-part-2-2023-3ccd4368a64
+
          
 
 
