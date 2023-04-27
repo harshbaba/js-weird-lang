@@ -193,14 +193,19 @@
     adding an emit() method so it can send arbitrary values. When you call emit(), 
     it passes the emitted value to the next() method of any subscribed observer.
 
-27. Subject vs BehaviorSubject vs ReplaySubject 
+27. Subject vs BehaviorSubject vs ReplaySubject:
+
     A subject is a special type of Observable which shares a single execution path among the 
     observers which results in a multicast (one to many).
 
     There are four types of Subjects available based on how they behave:
+
     Subject - No initial value or replay available
+
     AsyncSubject - Emits latest values to subscribers on completion of the async task
+    
     BehaviouralSubject - requires an initial value and emits current values to new subscribers
+    
     ReplaySubject - replays a specified number of last values to new subscribers
 
     https://stackoverflow.com/questions/43118769/subject-vs-behaviorsubject-vs-replaysubject-in-angular
