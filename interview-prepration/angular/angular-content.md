@@ -265,11 +265,15 @@
 
         https://www.credencys.com/blog/whats-new-in-angular-8-features/   
 
-31. Handle multiple API requests in Angular using mergeMap and forkJoin to avoid nested subscriptions
+31. Handle multiple API requests in Angular using mergeMap and forkJoin
+    to avoid nested subscriptions
     
     https://nehalist.io/multiple-http-requests-in-angular/
+
     https://levelup.gitconnected.com/handle-multiple-api-requests-in-angular-using-mergemap-and-forkjoin-to-avoid-nested-subscriptions-a20fb5040d0c
+    
     https://stackoverflow.com/questions/62937218/handle-multiple-api-requests-parallel-from-angular-8
+    
     https://www.geekstrick.com/tech-talks/how-to-call-multiple-rest-api-and-subscribe-in-angular/
 
 32. Setvalue vs Patchvalue Angular reactive Form Group
