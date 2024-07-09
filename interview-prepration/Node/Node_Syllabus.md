@@ -1,9 +1,12 @@
 Node syllabus:
+
 Founders: 
     Node: Ryan Dahl
     Node, NPM: Isaac Z. Schlueter
+
 Introduction to Node.js**
     What is Node.js?
+    
     *Why use Node.js/Advantaages?:
         Adavantages of Node over other server programming languages:
             ->Replaced multithreading by Asynchronous to remove the context switching overhead
