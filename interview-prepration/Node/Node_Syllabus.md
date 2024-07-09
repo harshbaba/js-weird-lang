@@ -16,16 +16,20 @@ Introduction to Node.js**
             ->Handle concurrent operation 
         Scalable: 
             ->highly scalable, vertical(cluster by child process) and horizontal(clusters)
+            
 How does Node.js work?
+
 Node.js Basics:
     The Node.js runtime environment 
     The Node.js package manager (NPM)
     Writing Node.js code
+    
 Basic Concepts:
    Synchronous programming
    Asynchronous programming
    Event-driven architecture
    Callback functions
+   
 Node.js Modules:
     What are Node.js modules?: blocks of encapsulated code 
     How to create and use Node.js modules?
@@ -35,38 +39,45 @@ Node.js Modules:
             Predefined Node modules, accessible from lib/ 
             `http`, `fs`, `path`, `events`, etc
         Local Modules: i.e. require('/my-module')
-        Third Party Modules: i.e. npm install <module-name>    
+        Third Party Modules: i.e. npm install <module-name> 
+        
 Events and the Event Loop:
     What are events and the event loop?
     How to use events and the event loop in Node.js
     Common Node.js events
+    
 Creating a Simple Server:
    Handling HTTP requests
    Sending responses
+   
 Basic File Operations:
     Reading files synchronously and asynchronously.
     Writing to files synchronously and asynchronously.
-    Understanding file paths and file descriptors.       
+    Understanding file paths and file descriptors. 
+    
 Streams and Buffers:
     What are streams and buffers?
     How to use streams and buffers in Node.js
     Common Node.js streams and buffers
+    
 The Express Framework:
     What is the Express framework?
     How to use the Express framework to create web applications
     Common Express framework features
+    
 Database Connectivity with Node.js:
     How to connect to a database from Node.js
     Common Node.js database drivers
     How to use Node.js to perform database operations
+    
 Creating REST APIs with Node.js:
     What are REST APIs, How to create REST APIs with Node.js, and Common Node.js REST API frameworks.
+    
 Deploying Node.js Applications:
     ci/cd
     How to deploy Node.js applications to production
     Common Node.js deployment options
-*/
-/*
+
 The syllabus and topics for learning Node.js can vary depending on your level of expertise and the specific goals you have in mind, but here's a general outline:
 
 ### Beginner Level:
