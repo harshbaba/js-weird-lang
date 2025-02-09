@@ -78,3 +78,15 @@
 
     https://medium.com/ascentic-technology/introduction-to-redux-saga-374cf397a72a
 
+1. Side Effects in Redux
+    https://redux.js.org/usage/side-effects-approaches
+
+1. Higher Order Component:
+    https://www.freecodecamp.org/news/higher-order-components-in-react/
+
+1. 7-react-performance-optimization-tec
+    https://medium.com/react-in-the-real-world/7-react-performance-optimization-techniques-you-cant-ignore-bc15c60e9a00
+
+1. Debouncing & Throttling
+    https://dev.to/aneeqakhan/throttling-and-debouncing-explained-1ocb
+
