@@ -1,6 +1,6 @@
 1. What is React.js? (Uses, Examples, & More)
 
-    https://blog.hubspot.com/website/react-js
+    https://www.geeksforgeeks.org/reactjs/reactjs-introduction/
 
 1. What is Hooks in React js?
 
