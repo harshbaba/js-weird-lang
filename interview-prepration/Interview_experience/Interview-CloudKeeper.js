@@ -4,14 +4,17 @@
 3.How you will show multiple mfe on one page.
 4.Difference b/w webworker & ServiceWorker
 5.What is Web Vitals.
+https://chatgpt.com/share/68d59c8c-1d1c-8009-83d7-0c0df5e6b797
 6.As a team lead How you will convince to your manager that accessibility is also a must have item.
 7.Difference b/w plugins and loaders.
 8.How data will be sharing in microfrontend.
 9.What is micro & macro task in callStack
 10.Break bundle in chunks in webpack.
+https://chatgpt.com/share/68d44fa6-9b9c-8009-9467-4095a568fc9d
 11.Tree Shaking & Dead Code Elimination
+https://chatgpt.com/share/68d44d3a-4bc0-8009-a20b-b38fe652ee79
 12.How we can do gzip compression in webpack.
-
+https://chatgpt.com/share/68d44ea5-c25c-8009-979e-501eb54632e6
 
 ======
 https://codeshare.io/5XNl3z
