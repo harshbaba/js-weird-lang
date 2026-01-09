@@ -7,6 +7,7 @@
 https://chatgpt.com/share/68d59c8c-1d1c-8009-83d7-0c0df5e6b797
 6.As a team lead How you will convince to your manager that accessibility is also a must have item.
 7.Difference b/w plugins and loaders.
+  https://chatgpt.com/share/6960a71d-e104-8009-91a9-60c22ce297ff
 8.How data will be sharing in microfrontend.
 9.What is micro & macro task in callStack
 10.Break bundle in chunks in webpack.
