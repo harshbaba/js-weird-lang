@@ -207,6 +207,32 @@ docker build -t my-node-app .
         docker exec -it container_id bash
       ```
 
+#### Caching Layers
+
+  - Docker does cache, so if you again run command for build then it completes in very less time.
+  - That is why we should keep installation code or common code at top, so next time when main.js code will change then from first few line will not execute again because it will start from changed code or line.
+  - So it is best practice always put such type of code at top.
+
+#### Publishing to Hub
+
+  - Go to gub.docker.com
+  - Login with your account
+  - Go to repository and create new repository
+  - Suppose repository you make like harshapache/my-node-app
+  - Now in your system you need to create image from same name: harshapache/my-node-app
+  - For creating image you will run.
+  - If you have to check image is created or not, go to Docker Desktop and see Images
+  - Now you have to push this image to hub.docker
+  - open new terminal in your system:
+  - Run docker push harshapache/my-node-app
+  - If you are not logged in docker in your system, it will ask for login
+  - in terminal run docker login
+  - then push your image.
+  - Once done go to hub.docker and reload, you will see your image is there.
+
+## Docker Compose
+  
+
 
 
 
