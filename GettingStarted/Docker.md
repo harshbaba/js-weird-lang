@@ -231,6 +231,843 @@ docker build -t my-node-app .
   - Once done go to hub.docker and reload, you will see your image is there.
 
 ## Docker Compose
+
+*Imagine you have a simple Node.js app Right now, your application only needs Node.js. You run it like this:*
+```bash
+docker build -t my-node-app .
+docker run my-node-app
+```
+*This is simple because there is only one container.*
+
+#### Now imagine a real-world application
+
+ - Your Node.js application needs:
+   - Node.js application
+   - MongoDB database
+   - Redis cache
+   
+#### Without Docker Compose
+
+*You would have to start each container manually.*
+- Start MongoDB:
+```bash
+docker run -d \
+  --name mongodb \
+  -p 27017:27017 \
+  mongo
+```
+
+- Start Redis:
+```bash
+  docker run -d \
+  --name redis \
+  -p 6379:6379 \
+  redis
+```
+
+- Start Node.js:
+```bash
+docker run \
+  --name node-app \
+  -p 3000:3000 \
+  --network my-network \
+  my-node-app
+  ```
+
+#### You also need to:
+
+- Create a Docker network
+- Connect containers
+- Set environment variables
+- Mount volumes
+- Expose ports
+- Start them in the correct order
+
+*As your application grows, this becomes tedious and error-prone.*
+
+#### Docker Compose to the rescue
+
+- Instead of typing many commands, you describe everything in one file.
+
+##### Example:
+
+```bash
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+
+  mongodb:
+    image: mongo
+
+  redis:
+    image: redis
+
+```
+*Save this as:*
+
+```bash
+docker-compose.yml
+```
+
+Now start everything with one command:
+
+```bash
+docker compose up
+```
+
+##### Docker automatically:
+
+- Builds your app image
+- Starts the Node container
+- Starts MongoDB
+- Starts Redis
+- Creates a network
+- Connects all containers
+
+## Docker Networking
+
+### Why do We Need Networking?
+
+Imagine you have two containers:
+
+```text
++----------------+      +----------------+
+| Node.js App    | ---> | MongoDB        |
+| Port: 3000     |      | Port: 27017    |
++----------------+      +----------------+
+```
+
+Your **Node.js application** needs to send queries to **MongoDB**.
+
+Without networking, the containers are isolated and **cannot communicate**.
+
+Docker networking solves this problem.
+
+---
+
+### Every Container Has Its Own Network
+
+When you run a container:
+
+```bash
+docker run nginx
+```
+
+Docker automatically creates:
+
+- A network interface
+- An IP address
+- A hostname
+
+Think of a container as a small virtual machine.
+
+```text
++----------------------+
+|      Container       |
+|----------------------|
+| Hostname             |
+| IP Address           |
+| Network Interface    |
++----------------------+
+```
+
+---
+
+### Types of Docker Networks
+
+Docker provides several network drivers.
+
+The most common are:
+
+| Network Type | Purpose |
+|--------------|---------|
+| **bridge** | Communication between containers on the same host (default) |
+| **host** | Container shares the host's network |
+| **none** | No networking at all |
+| **overlay** | Communication across multiple Docker hosts (Docker Swarm) |
+
+> **For beginners, focus on the `bridge` network.**
+
+---
+
+### Bridge Network (Default)
+
+When Docker is installed, it automatically creates a **bridge network**.
+
+Check it using:
+
+```bash
+docker network ls
+```
+
+Example output:
+
+```text
+NETWORK ID     NAME      DRIVER
+abc123         bridge    bridge
+def456         host      host
+ghi789         none      null
+```
+
+The **bridge** network is the default network.
+
+---
+
+#### Running a Container
+
+```bash
+docker run -d nginx
+```
+
+Docker automatically connects it to the bridge network.
+
+```text
+Host Machine
+-----------------------------
+
+       Bridge Network
+              |
+              |
+         +------------+
+         |   Nginx    |
+         | 172.17.0.2 |
+         +------------+
+```
+
+---
+
+### Container Gets an IP Address
+
+Inspect a container:
+
+```bash
+docker inspect <container-id>
+```
+
+Example:
+
+```json
+"IPAddress": "172.17.0.2"
+```
+
+Every container gets its own IP address.
+
+---
+
+### Problem with the Default Bridge Network
+
+Suppose you start two containers:
+
+```bash
+docker run -d --name app my-node-app
+docker run -d --name mongo mongo
+```
+
+Both are connected to the default bridge network.
+
+```text
+Bridge Network
+
++-------------+
+| App         |
+| 172.17.0.2  |
++-------------+
+
++-------------+
+| Mongo       |
+| 172.17.0.3  |
++-------------+
+```
+
+Can the app connect using:
+
+```text
+mongodb://mongo:27017
+```
+
+**No.**
+
+On the **default bridge network**, Docker **does not provide automatic DNS-based name resolution** between containers.
+
+You would have to:
+
+- Use the container's IP address, or
+- Use the legacy `--link` option (**deprecated**).
+
+Using IP addresses is a bad idea because they can change whenever the container is recreated.
+
+---
+
+### User-Defined Bridge Network
+
+Instead, create your own bridge network:
+
+```bash
+docker network create my-network
+```
+
+Verify:
+
+```bash
+docker network ls
+```
+
+Example:
+
+```text
+bridge
+host
+none
+my-network
+```
+
+---
+
+### Start Containers on the Same Network
+
+Start MongoDB:
+
+```bash
+docker run -d \
+  --name mongo \
+  --network my-network \
+  mongo
+```
+
+Start the Node.js application:
+
+```bash
+docker run -d \
+  --name app \
+  --network my-network \
+  my-node-app
+```
+
+Network layout:
+
+```text
+      my-network
+
+    +---------+
+    |  App    |
+    +---------+
+         |
+         |
+    +---------+
+    | Mongo   |
+    +---------+
+```
+
+Docker automatically provides **DNS resolution** for containers on **user-defined bridge networks**.
+
+Your Node.js application can simply connect using:
+
+```text
+mongodb://mongo:27017
+```
+
+Here, **`mongo`** is the container name.
+
+No IP addresses are required.
+
+---
+
+### Publishing Ports
+
+Inside the container:
+
+```text
+Node.js App
+Port 3000
+```
+
+Can your browser access it?
+
+**No.**
+
+The application is running **inside the container**, so its port is not exposed to your host machine.
+
+You must publish the port.
+
+```bash
+docker run -p 3000:3000 my-node-app
+```
+
+Meaning:
+
+```text
+Host:3000
+    |
+    |
+Container:3000
+```
+
+Now you can visit:
+
+```text
+http://localhost:3000
+```
+
+### Common Docker Network Commands
+
+### Create a Network
+
+```bash
+docker network create my-network
+```
+
+Creates a new user-defined bridge network.
+
+---
+
+### List Networks
+
+```bash
+docker network ls
+```
+
+Displays all available Docker networks.
+
+---
+
+### Inspect a Network
+
+```bash
+docker network inspect my-network
+```
+
+Shows detailed information about the network, including:
+
+- Connected containers
+- Network driver
+- Subnet
+- Gateway
+- Configuration details
+
+---
+
+### Connect a Running Container to a Network
+
+```bash
+docker network connect my-network app
+```
+
+Connects the running container **`app`** to the **`my-network`** network.
+
+---
+
+### Disconnect a Running Container from a Network
+
+```bash
+docker network disconnect my-network app
+```
+
+Removes the running container **`app`** from the **`my-network`** network.
+
+---
+
+### Remove a Network
+
+```bash
+docker network rm my-network
+```
+
+Deletes the network named **`my-network`**.
+
+> **Note:** A network can only be removed if no containers are currently connected to it.
+
+## Docker Volume Mounting 
+
+## What is Volume Mounting?
+
+Volume mounting allows you to **share** or **persist data** outside the container.
+
+Containers are **temporary (ephemeral)**. If you remove a container, any data stored **only inside the container** is permanently lost.
+
+---
+
+### Why Do We Need Volume Mounting?
+
+There are two main reasons:
+
+1. **Persist Data**
+2. **Share Files with Your Computer (Development)**
+
+---
+
+### 1. Persist Data
+
+Store important data such as:
+
+- Database files
+- Uploaded files
+- Logs
+- Application data
+
+outside the container so it survives even if the container is deleted.
+
+#### Without a Volume
+
+```text
+Container
+│
+└── database.db
+
+docker rm container
+
+database.db ❌ Lost
+```
+
+Once the container is removed, the data is gone.
+
+---
+
+#### With a Volume
+
+```text
+Container
+     │
+     ▼
+Docker Volume
+     │
+database.db
+
+docker rm container
+
+Container ❌
+Volume ✅
+Data ✅
+```
+
+Even if the container is deleted, the volume still exists and your data is preserved.
+
+---
+
+### 2. Share Files with Your Computer (Development)
+
+Instead of rebuilding the Docker image after every code change, you can mount your project folder into the container.
+
+```text
+Host Machine
+
+main.js
+     │
+     ▼
+Container
+/app/main.js
+```
+
+Now when you edit **`main.js`** in VS Code (or any editor), the container immediately sees the updated file.
+
+No image rebuild is required.
+
+---
+
+### Two Types of Mounts
+
+#### 1. Bind Mount
+
+A **Bind Mount** shares a folder from your computer with the container.
+
+Example:
+
+```bash
+docker run -v $(pwd):/app my-node-app
+```
+
+### Best For
+
+- Development
+- Live code changes
+- Working with source code
+
+---
+
+#### 2. Named Volume
+
+A **Named Volume** is managed entirely by Docker.
+
+Create a volume:
+
+```bash
+docker volume create my-volume
+```
+
+Use it:
+
+```bash
+docker run -v my-volume:/app/data my-node-app
+```
+
+#### Best For
+
+- Databases
+- Uploaded files
+- Persistent application data
+- Logs and backups
+
+---
+
+### Bind Mount vs Named Volume
+
+| Bind Mount | Named Volume |
+|------------|--------------|
+| Uses your local folder | Managed by Docker |
+| Great for source code | Great for persistent data |
+| Edit files directly from VS Code | Data survives container recreation |
+| Ideal for development | Ideal for production data |
+
+---
+
+#### When Should You Use Which?
+
+| Scenario | Recommended |
+|----------|-------------|
+| Developing a Node.js application | **Bind Mount** |
+| MongoDB / PostgreSQL data | **Named Volume** |
+| Uploads, logs, backups | **Named Volume** |
+| Live code editing | **Bind Mount** |
+
+---
+
+### Easy Way to Remember
+
+> **Bind Mount = Share my local folder with the container.**
+
+> **Named Volume = Give the container permanent storage.**
+
+---
+
+### Summary
+
+Docker volume mounting helps you:
+
+- Persist important data outside containers
+- Share files between your computer and containers
+- Develop faster with live code updates
+- Keep databases and uploads safe even after containers are removed
+
+That's the core idea behind **Docker Volume Mounting**.
+
+## Docker Layer Caching
+
+ - Docker builds images layer by layer and caches each layer. If a layer hasn't changed, Docker reuses it. Once a layer changes, that layer and every layer after it must be rebuilt.
+
+ - That's why a well-structured Dockerfile can make builds dramatically faster, especially for applications where source code changes frequently but dependencies change infrequently.
+
+## Docker Multi-Stage Builds
+
+### Why Do We Need Multi-Stage Builds?
+
+Suppose you're building a **Node.js application**.
+
+During the build process, you need:
+
+- Node.js
+- npm
+- Development dependencies
+- Build tools
+
+However, when running the application, you only need:
+
+- Node.js
+- Your compiled application
+
+You **don't need the build tools anymore**.
+
+Without multi-stage builds, everything remains in the final Docker image.
+
+```text
+Final Image
+
+Ubuntu
+├── Node.js
+├── npm
+├── Build tools
+├── Source code
+├── node_modules
+└── Application
+```
+
+As a result, the image becomes much larger than necessary.
+
+---
+
+# Real-Life Analogy
+
+Imagine you're building a house.
+
+During construction, you use:
+
+- Cement mixer
+- Crane
+- Scaffolding
+- Drilling machine
+
+Once the house is finished, do you leave all those machines inside?
+
+**No.**
+
+You remove them and keep only the finished house.
+
+Docker **Multi-Stage Builds** follow the same idea.
+
+---
+
+# Without Multi-Stage Build
+
+```dockerfile
+FROM ubuntu:24.04
+
+RUN apt-get update
+RUN apt-get install -y nodejs npm
+
+WORKDIR /app
+
+COPY . .
+
+RUN npm install
+RUN npm run build
+
+CMD ["node", "dist/main.js"]
+```
+
+After building, the final image contains everything:
+
+```text
+Image
+
+Ubuntu
+├── Node.js
+├── npm
+├── Source Code
+├── Build Tools
+├── node_modules
+└── dist/
+```
+
+Everything stays in the image, including files that are no longer needed.
+
+---
+
+## With Multi-Stage Build
+
+```dockerfile
+# ---------- Stage 1 ----------
+FROM node:22 AS builder
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+RUN npm run build
+
+
+# ---------- Stage 2 ----------
+FROM node:22-slim
+
+WORKDIR /app
+
+COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/package.json .
+
+RUN npm install --omit=dev
+
+CMD ["node", "dist/main.js"]
+```
+
+Notice that there are **two `FROM` instructions**.
+
+Each `FROM` starts a completely new build stage.
+
+---
+
+### Stage 1 – Builder
+
+```dockerfile
+FROM node:22 AS builder
+```
+
+This stage exists **only to build the application**.
+
+```text
+Builder Stage
+
+Node.js
+npm
+Source Code
+Build Tools
+```
+
+It runs:
+
+```dockerfile
+RUN npm install
+RUN npm run build
+```
+
+The result is a compiled application:
+
+```text
+dist/
+```
+
+---
+
+### Stage 2 – Production
+
+The second stage starts from a fresh image.
+
+```dockerfile
+FROM node:22-slim
+```
+
+This image knows **nothing about Stage 1**.
+
+Initially, it contains only:
+
+```text
+Production Stage
+
+Node.js
+```
+
+There is:
+
+- No source code
+- No build tools
+- No development dependencies
+
+---
+
+### Copy Only What You Need
+
+```dockerfile
+COPY --from=builder /app/dist ./dist
+```
+
+This means:
+
+```text
+Builder Stage
+-----------------
+/app/dist
+      │
+      ▼
+Production Stage
+-----------------
+/app/dist
+```
+
+Only the compiled application (`dist/`) is copied into the final image.
+
+The source code, build tools, and other unnecessary files are left behind in the builder stage, resulting in a **smaller, cleaner, and more secure production image**.
   
 
 
