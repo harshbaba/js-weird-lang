@@ -1068,8 +1068,78 @@ Production Stage
 Only the compiled application (`dist/`) is copied into the final image.
 
 The source code, build tools, and other unnecessary files are left behind in the builder stage, resulting in a **smaller, cleaner, and more secure production image**.
-  
 
+
+## Deploying Docker Container on AWS ECS (Elastic Container Service)
+
+#### Create Image of your application
+  ```bash
+  docker build -t Image_Name .
+  ```
+
+#### Deploy Image on AWS ECR (Elastic Container Repository)
+- Go To AWS
+- Amazon ECR -> Repositories -> Create Repository
+- After Creating Repo -> View Push Commands
+- Will Give command for login -> Open Terminal and run that command and do login
+- docker build -t Repo_Name
+- For confirmation, run docker images and see all image
+- Now run further command given by AWS and push your image
+
+#### Now Open ECS (Elastic Container Service)
+
+  - Here we will create cluster (Inside cluster we can put multiple services like auth service, apis or socket
+  - Create Cluster, We can choose infrastructure Server less or EC2. (Ec2 will be expensive in compare to Server less)
+  - Inside Cluster we will create service like api
+  - Now we will create task, task will be linked and run to our image what we had deployed in registry.
+  - Inside cluster we will give this task to a api service
+  - Service will run this task inside cluster, will also so automatically scale up, down, if crashes then will restart.
+
+#### Go to Task definitions
+  - Create new Task definitions
+  - Inside Container configuration:
+    - Give container name
+    - Give Image Url, what you had deployed on ECR
+    - Choose port
+    - give health check route (view command by info)
+    - There is interval (what time you will give suppose 1 mins then it will check on every one minutes container is running fine or not.
+    - Now go to cluster what you had created previously and
+      - create service
+      - In Family dropdown choose task which you have to run
+      - Desired Task (if you enter 2, then two task will run parllely and distribute load as load balancer.
+      - In Load Balancing Tab you can create load balancer
+      - Go to In service auto scaling tab and enter configuration
+        - Choose Minimum number of task and maximum number of task (if traffic increases then new container spin up)
+        - There is Field ECS Service metric dropdown
+        - choose cpu utilization and enter value like 70 (it means if 70 % cpu utilisation done of container then new container spin up)
+
+#### rolling Updates
+
+    - If you change code and again create build image and push image on repo
+    - go to update service and force new deployment.
+    - Then Services will spinup two new container (because 2 desired task you had choose)
+    - Now total four container are running, while we need only two
+    - Now service will check new two container are health or not, if healthy then old container will be destroy.
+    - This strategy will provide zero down time, if new container crash then it will destroy new one and will continue running with old code.
+
+
+***Whole Process called Container Orchestration***
+
+## Cleaning up Containers
+
+- Once you done POC then you need to cleanup your container otherwise you will get huge bill.
+- Go to Clusters -> Services and do Minimum No of task & Desired Task to zero
+- Then force new deployement
+- It will start to destroy each task one by one
+- Once each tasks destroyed inside TASKS tabs
+- Then go To service and delete that service
+- Then you can delete cluster as well
+- And you can delete ECR as well.
+- Make sure to cleanup every thing, otherwise you can get huge bill
+
+
+
+    
 
 
 
